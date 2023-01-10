@@ -1,16 +1,35 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2707
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-
-\f0\fs24 \cf0 @software\{Armando2023,\
-	author = \{Armando A. Roque, Olivier  Sarbach\},\
-	#doi = \{\},\
-	month = \{12\},\
-	title = \{\{On the radial linear stability of nonrelativistic $\\ell$-boson stars. Its numerical repository.\}\},\
-	url = \{https://github.com/Mandy8808/Numerical_Implementation.git\},\
-	version = \{1.0.0\},\
-	year = \{2023\}\
-\}}
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Roque"
+  given-names: "Armando A."
+  orcid: "https://orcid.org/0000-0002-3290-6072"
+- family-names: "Sarbach"
+  given-names: "Olivier"
+  orcid: "https://orcid.org/0000-0002-0753-4449"
+title: "On the radial linear stability of nonrelativistic $\ell$-boson stars. Its numerical repository."
+version: 1.0.0
+# doi: 10.5281/zenodo.1234
+date-released: 2023-01-01
+url: "https://github.com/Mandy8808/Numerical_Implementation.git"
+preferred-citation:
+#  type: article
+#  authors:
+#  - family-names: "Roque"
+#    given-names: "Armando A."
+#    orcid: "https://orcid.org/0000-0002-3290-6072"
+#  - family-names: "Sarbach"
+#    given-names: "Olivier"
+#    orcid: "https://orcid.org/0000-0002-0753-4449"
+#  - family-names: "Sarbach"
+#    given-names: "Emmanuel"
+#    orcid: ""
+#    doi: "10.0000/00000"
+  # journal: "Journal Title"
+  # month: 9
+  # start: 1 # First page number
+  # end: 10 # Last page number
+  # title: "My awesome research software"
+  # issue: 1
+  # volume: 1
+  # year: 2021
