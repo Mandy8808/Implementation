@@ -1,16 +1,31 @@
-# Rutinas utilizadas para paper Harrison
+# Next are present a number of routines used in
+# arXiv:
+
+#####
+# modules
+#####
 import numpy as np
 
 from scipy.interpolate import interp1d
 from scipy.integrate import solve_ivp, quad
 from scipy.linalg import eig
 
+#####
+# Routines
+#####
 
-# Cheby matiz de diferenciación
+
 def cheb(op):
-    '''Chebushev polynomial differentiation matrix.
-       Ref.: Trefethen's 'Spectral Methods in MATLAB' book.
-       N - size of diff matrix - op+1 where op is polynomial order.
+    '''
+    Ref.: Trefethen's 'Spectral Methods in MATLAB' book.
+   
+    In:
+    op -> polynomial order
+    N - size of diff matrix - op+1 where op is polynomial order.
+   
+    Out: 
+    D -> Chebushev polynomial differentiation matrix.
+    x -> Chebushev points
     '''
 
     N = op+1
@@ -33,24 +48,30 @@ def cheb(op):
     # diagonal entries
     Dii = np.diag(Dtemp.sum(axis=1))  # sum by the row, and construct a diagonal array
 
-    # Dn
     D = Dtemp - Dii
 
     return D, x
 
 
-# Ecuaciones de fondo con l=0
-# las unidades son las usadas en el paper
-# Spherically-symmetric solutions of the Schrödinger-Newton equations
-# moroz1998, con el único detalle de que \betaV=U-E
 def system(r, V, arg):
     """
-    Sistema de ecuaciones de primer orden
-    f = campo, u = potencial
-    Variables: f, df, u, du = V
+    Spherically-symmetric Nonrelativistic ell-boson system Eq. 41 in
+    Ref.:
+    Notice that was used the rescale sigma(r) = r^l f(r) 
+
+    In:
+    r -> radial coordinate
+    V -> a vector (with the values at r) the form [f, df, u, du], with "u" the shifted potential and 'd' indicate the
+         first derivative of f, and u.
+    arg -> ell value
+
+    Out:
+    A vector [df, ddf, du, ddu] with the values after an iteration step.
     """
+
     f, df, u, du = V
     ell = arg
+    
     if r > 0:
         ddf = -f*u - 2*(ell+1)*df/r
         ddu = -r**(2*ell)*f**2 - 2*du/r
@@ -61,13 +82,14 @@ def system(r, V, arg):
         return [df, ddf, du, ddu]
 
 
-# SHOOTING PARA ENCONTRAR N nodos
+# Shooting methodology using a bisection approax
 def Freq_solveG(f_max, f_min, ell, rmax_, rmin_, nodos, u0=1.0, df0=0, du0=0,
                 met='RK45', Rtol=1e-09, Atol=1e-10):
     """
     Orden de las variables U = w, dw, phi, dphi
     """
     print('Finding a profile with ', nodos, 'nodes')
+    
     # IMPORTANT: it is not possible to find two event at same time
     # Events
     arg = [ell]
@@ -75,6 +97,7 @@ def Freq_solveG(f_max, f_min, ell, rmax_, rmin_, nodos, u0=1.0, df0=0, du0=0,
     def dSig(r, U, arg): return U[1]
     Sig.direction = 0
     dSig.direction = 0
+    
     while True:
         f0_ = (f_max+f_min)/2
         U0 = [f0_, df0, u0, du0]
@@ -103,7 +126,7 @@ def Freq_solveG(f_max, f_min, ell, rmax_, rmin_, nodos, u0=1.0, df0=0, du0=0,
 
         # checking the lim freq.
         if abs((f_max-f_min)/2) <= 1e-15:
-            print('Maxima precisión alcanzada', f0_, 'radio', rTemp_)
+            print('Maximum precision achieved', f0_, 'radius', rTemp_)
             return f0_, rTemp_, sol_.t_events[0]
 
 
