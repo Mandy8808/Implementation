@@ -4,8 +4,8 @@
 
 The repository consists of two folders: 
 
-- **Modules:** where are the modules used 
-- **ell_boson:** where are the jupyter notebook used for the background solution, its perturbations, and some plots.
+- **Modules**: where appear the different modules used.
+- **ell_boson**: where appear the jupyter's notebooks used for the background solution, its perturbations, and generate some plots.
 
 ### Modules folder
 
