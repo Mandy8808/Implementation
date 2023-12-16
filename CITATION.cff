@@ -4,13 +4,11 @@ authors:
 - family-names: "Roque"
   given-names: "Armando A."
   orcid: "https://orcid.org/0000-0002-3290-6072"
-- family-names: "Sarbach"
-  given-names: "Olivier"
-  orcid: "https://orcid.org/0000-0002-0753-4449"
-title: "On the radial linear stability of nonrelativistic $\ell$-boson stars. Its numerical repository."
-version: 1.0.0
+
+title: "Numerical repository."
+version: 2.0.0
 # doi: 10.5281/zenodo.1234
-date-released: 2023-01-01
+date-released: 2023-12-01
 url: "https://github.com/Mandy8808/Implementation.git"
 preferred-citation:
 #  type: article
