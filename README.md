@@ -1,4 +1,5 @@
-# Numerical Implementation papers:
+# Numerical Implementation:
+In this repository we present our numerical results, implementation and algorithms used in the papers:
 
 # [On the radial linear stability of nonrelativistic \ell-boson stars](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.084001)
 
