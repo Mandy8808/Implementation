@@ -11,3 +11,7 @@ The repository consists of two folders:
 
 
 ### ell_boson folder
+
+# [Total light bending in non-asymptotically flat black hole spacetimes](https:)
+
+# [Are nonrelativistic ground state  ell-boson stars only stable for ell=0 and ell=1?](https:)
