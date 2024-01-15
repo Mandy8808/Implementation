@@ -1,5 +1,5 @@
 # Numerical Implementation:
-In this repository we present a set of Python modules, Jupyter and Mathematica notebook used to study the stability of scalar-compact objects. The numerical implementations and algorithms correspond to the results resport in the papers:
+In this repository we present a set of Python modules, Jupyter and Mathematica notebook used to study the stability of scalar-compact objects. The numerical implementations and algorithms correspond to the results reported in the papers:
 
 # [On the radial linear stability of nonrelativistic \ell-boson stars](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.084001)
 
