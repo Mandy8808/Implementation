@@ -1,7 +1,7 @@
 # Numerical Implementation:
 In this repository we present a set of Python modules, Jupyter and Mathematica notebook used to study the stability of scalar-compact objects. The numerical implementations and algorithms correspond to the results reported in the papers:
 
-# [On the linear stability of nonrelativistic selfinteracting boson stars](https://arxiv.org/abs/2310.18405)
+# [On the linear stability of nonrelativistic selfinteracting boson stars](https://arxiv.org/pdf/2402.07998.pdf)
 
 The repository **LS_selfinteraction_BS** consists of two folders:
 - **Module**: where appear a module with the used functions.
