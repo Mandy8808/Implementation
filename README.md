@@ -18,10 +18,10 @@ The repository **AGS_ell_boson** consists of two folders:
 
 # [Total light bending in non-asymptotically flat black hole spacetimes](https://iopscience.iop.org/article/10.1088/1361-6382/ad0e81)
 
-The repository **TLB_non_asymptoticallyFBHST** consists of two folders: 
+The repository **TLB_non_asymptoticallyFBHST** comprises two folders: 
 
-- **Mathematica's notebook**: where appear the Mathematica's notebooks with the null-geodesic solutions and the triangular configurations studied.
-- **Python jupyter's notebooks**: where appear some jupyter notebooks used to validate the Mathematica results and the notebooks used to generate the plots.
+- **Mathematica's notebook**: This folder contains Mathematica notebooks presenting the null-geodesic solutions and the triangular configurations studied.
+- **Python jupyter's notebooks**: This folder includes Jupyter notebooks utilized for validating the Mathematica results and generating the plots.
 
 # [On the radial linear stability of nonrelativistic \ell-boson stars](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.084001)
 

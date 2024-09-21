@@ -67,8 +67,8 @@ def system(r, V, arg):
         ddu = -r**(2*ell)*f**2 - 2*du/r
         return [df, ddf, du, ddu]
     else:
-        ddf = u*f/(2*ell + 3)
-        ddu = 0
+        ddf = -u*f/(2*ell + 3)  # o +
+        ddu = -r**(2*ell)*f**2/3 # 0
         return [df, ddf, du, ddu]
 
 

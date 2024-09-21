@@ -223,7 +223,7 @@ def system(r, V, arg):
         return [df, ddf, du, ddu]
     else:
         ddf = (-u*f+Lamb*f**3)/3  # o más?
-        ddu = 0
+        ddu = -alf*f**2/3 # 0
         return [df, ddf, du, ddu]
 
 def NpuntosCho(s0, rMax):
